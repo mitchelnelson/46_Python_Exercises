@@ -252,3 +252,35 @@ def find_longest_word(word_list):
 
 # Test:
 # print(find_longest_word(["Hello", "world", "longword"]))
+
+# *********************************************************************
+
+# 16. Write a function filter_long_words() that takes a list of words and an integer n and returns the list of words that are longer than n.
+
+
+def filter_long_words(word_list, n):
+
+    filtered_list = []
+    integer_list = words_to_integers(word_list)
+
+    for i in range(len(integer_list)):
+        if integer_list[i] > n:
+            filtered_list.append(word_list[i])
+
+    return filtered_list
+
+
+# Test:
+# print(filter_long_words(["Hello", "world", "longword"], 6))
+
+# *********************************************************************
+
+# 17. Write a function is_phrase_palindrome that accepts phrase palindromes.
+
+
+def is_phrase_palindrome(phrase):
+    return reverse(phrase.lower()) == phrase.lower()
+
+
+# Test:
+# print(is_phrase_palindrome("Step on no pets"))
