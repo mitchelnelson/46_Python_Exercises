@@ -232,3 +232,23 @@ def words_to_integers(word_list):
 
 # Test:
 # print(words_to_integers(["Hello", "world", "how", "may", "I", "help", "you"]))
+
+# *********************************************************************
+
+# 15. Write a function find_longest_word() that takes a list of words and returns the length of the longest one
+
+
+def find_longest_word(word_list):
+
+    longest_length = 0
+    integer_list = words_to_integers(word_list)
+
+    for item in integer_list:
+        if item > longest_length:
+            longest_length = item
+
+    return longest_length
+
+
+# Test:
+# print(find_longest_word(["Hello", "world", "longword"]))
