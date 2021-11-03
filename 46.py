@@ -284,3 +284,20 @@ def is_phrase_palindrome(phrase):
 
 # Test:
 # print(is_phrase_palindrome("Step on no pets"))
+
+# *********************************************************************
+
+# 18. A pangram is a sentence that contains all the letters of the English alphabet
+# at least once. Write a function to check a sentence to see if it is a pangram.
+
+
+def is_pangram(sentence):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for char in sentence:
+        char = char.lower()
+        if char in alphabet:
+            alphabet = alphabet.replace(char, "")
+
+    if alphabet == "":
+        return True
+    return False
